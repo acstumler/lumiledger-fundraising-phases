@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import FundingPhases from "./pages/FundingPhases.jsx";
-import "./styles.css";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },

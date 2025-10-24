@@ -1,4 +1,6 @@
 import React from "react";
+import BrandHeader from "../components/BrandHeader.jsx";
+import Foot from "../components/Foot.jsx";
 import PhaseCard from "../components/PhaseCard.jsx";
 
 const phases = [
@@ -68,51 +70,37 @@ const phases = [
 
 export default function FundingPhases() {
   return (
-    <div className="wrap">
-      <header className="topbar">
-        <div className="brand">
-          <div className="logo" />
-          <span>LumiLedger</span>
-        </div>
-        <a className="btn" href="mailto:alanson.stumler@lumiledger.com">Contact</a>
-      </header>
+    <>
+      <BrandHeader />
 
-      <section className="hero compact">
-        <h1>Funding Plan — 3 Phases, 3 Months Each</h1>
-        <p className="lead">
-          Clear use of funds and milestones for Build → Scale → Expansion.
-        </p>
-        <div className="links">
-          <a className="link" href="/docs/LumiLedger_FundingPlan.pdf" target="_blank" rel="noreferrer">Download Plan (PDF)</a>
-          <a className="link" href="/docs/Phase1_Deck.pdf" target="_blank" rel="noreferrer">Phase 1 Slide Deck</a>
+      <section id="overview" className="cover">
+        <div className="cover-art" aria-hidden="true"></div>
+        <div className="cover-copy invert">
+          <h1>Funding Plan — 3 Phases, 3 Months Each</h1>
+          <p>Clear use of funds and milestones for Build → Scale → Expansion.</p>
+          <div>
+            <a className="backtotop" href="mailto:alanson.stumler@lumiledger.com">Connect with LumiLedger</a>
+          </div>
         </div>
       </section>
 
-      <section className="timeline">
-        <div className="bar">
-          <div className="node n1"><span>Q4’25</span></div>
-          <div className="node n2"><span>Q1’26</span></div>
-          <div className="node n3"><span>Q2’26</span></div>
+      <section className="wins" style={{ borderBottom: "1px solid var(--line)" }}>
+        <h2>Use of Funds by Phase</h2>
+        <div className="cards">
+          {phases.map((p) => <PhaseCard key={p.id} phase={p} />)}
         </div>
       </section>
 
-      <section className="cards">
-        {phases.map(p => <PhaseCard key={p.id} phase={p} />)}
+      <section className="wins">
+        <h2>Timeline</h2>
+        <div className="wins-grid" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+          <div className="win"><h4>Q4 2025</h4><p>Complete MVP + legal + pilot onboarding.</p></div>
+          <div className="win"><h4>Q1 2026</h4><p>1–3K users, subscriptions live, infra stabilized.</p></div>
+          <div className="win"><h4>Q2 2026</h4><p>10K users, profitability in sight, Series-A readiness.</p></div>
+        </div>
       </section>
 
-      <section className="ctaBlock">
-        <h2>Why this wins</h2>
-        <ul className="bullets">
-          <li>Owner-first automation from raw data to statements and KPIs</li>
-          <li>97%+ software-style gross margins at scale</li>
-          <li>Architecture designed for low cost per user (&lt;$0.30)</li>
-        </ul>
-        <a className="cta" href="mailto:alanson.stumler@lumiledger.com">Connect with LumiLedger</a>
-      </section>
-
-      <footer className="footer">
-        <span>© {new Date().getFullYear()} LumiLedger</span>
-      </footer>
-    </div>
+      <Foot />
+    </>
   );
 }
