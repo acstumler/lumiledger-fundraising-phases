@@ -21,77 +21,84 @@ body{
 .brochure-header{
   position:sticky; top:0; z-index:20;
   background:#ffffffcc;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-bottom:1px solid var(--line);
 }
 .brand-line{
-  max-width:1100px; margin:0 auto; padding:12px 16px;
-  display:flex; align-items:center; gap:10px;
+  max-width:1100px; margin:0 auto; padding:14px 16px;
+  display:flex; align-items:center; gap:12px;
   letter-spacing:.08em; font-weight:800; color:var(--brand);
 }
-.brand-badge{display:flex; align-items:center; justify-content:center; width:28px; height:28px}
-.brand-icon{width:28px; height:28px; display:block}
-.brand-word{font-size:14px}
+.brand-badge{display:flex; align-items:center; justify-content:center; width:66px; height:66px}
+.brand-icon{width:66px; height:66px; display:block}
+.brand-word{font-size:16px}
 
-/* cover */
+/* cover (large gradient hero) */
 .cover{position:relative; overflow:hidden; border-bottom:1px solid var(--line)}
 .cover-art{
-  height:110px; background:radial-gradient(800px 200px at 10% -30%, #e9eefb 10%, transparent 60%),
-              radial-gradient(900px 250px at 100% -40%, #e9eefb 10%, transparent 60%),
-              linear-gradient(#f7f9ff,#ffffff);
+  min-height:68vh;
+  background:
+    radial-gradient(1200px 600px at 10% -30%, #e9eefb 10%, transparent 60%),
+    radial-gradient(1200px 600px at 100% -40%, #e9eefb 10%, transparent 60%),
+    linear-gradient(115deg, #7b6dff 0%, #4ec7e8 50%, #b8e3ff 100%);
 }
-.cover-copy{max-width:1100px; margin:-40px auto 0; padding:0 16px 18px}
-.cover-copy h1{margin:0 0 8px; font-size:28px}
-.cover-copy p{margin:0; color:var(--muted); line-height:1.6}
-.invert{color:var(--ink)}
+.cover-copy{
+  max-width:1100px; margin:-46vh auto 0; padding:0 16px 32px;
+  display:flex; flex-direction:column; justify-content:flex-end; min-height:68vh;
+}
+.cover-copy h1{margin:0 0 12px; font-size:48px; line-height:1.1}
+.cover-copy p{margin:0; color:#eef3fd; max-width:760px; font-size:18px; line-height:1.6}
+.invert{color:#fff}
 
 /* pillars */
 .pillars-band{
-  max-width:1100px; margin:18px auto; padding:0 16px;
-  display:grid; grid-template-columns:repeat(6,1fr); gap:10px;
+  max-width:1100px; margin:22px auto; padding:0 16px;
+  display:grid; grid-template-columns:repeat(6,1fr); gap:12px;
 }
-.pill{border:1px solid var(--line); border-radius:12px; padding:10px; background:#fff}
-.p-title{font-weight:700; font-size:13px}
+.pill{border:1px solid var(--line); border-radius:14px; padding:12px; background:#fff}
+.p-title{font-weight:700; font-size:14px}
 .p-desc{color:var(--muted); font-size:13px}
 
 /* wins/cards */
-.wins{max-width:1100px; margin:22px auto; padding:0 16px}
-.wins h2{margin:0 0 10px; font-size:20px}
-.wins-grid{display:grid; gap:10px}
-.win{border:1px solid var(--line); border-radius:12px; padding:12px; background:#fff}
-.win h4{margin:0 0 4px; font-size:14px}
+.wins{max-width:1100px; margin:26px auto; padding:0 16px}
+.wins h2{margin:0 0 12px; font-size:22px}
+.wins-grid{display:grid; gap:12px}
+.win{border:1px solid var(--line); border-radius:14px; padding:14px; background:#fff}
+.win h4{margin:0 0 6px; font-size:16px}
 
-.cards{display:grid; gap:12px}
+.cards{display:grid; gap:14px}
 .card{
-  border:1px solid var(--line); border-radius:14px; background:#fff; padding:14px;
-  box-shadow:0 4px 16px rgba(0,0,0,.04);
+  border:1px solid var(--line); border-radius:16px; background:#fff; padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
-.card .p{font-weight:700; margin-bottom:6px}
-.card ul{margin:6px 0; padding-left:16px; color:var(--muted)}
+.card .p{font-weight:800; margin-bottom:6px}
+.card ul{margin:6px 0; padding-left:18px; color:var(--muted)}
 .card ul li{margin:4px 0}
 
 /* footer */
-.foot{border-top:1px solid var(--line); margin-top:24px; background:#fff}
-.foot-inner{max-width:1100px; margin:0 auto; padding:14px 16px}
-.foot-site{display:inline-block; font-weight:700; text-decoration:none; color:var(--brand)}
+.foot{border-top:1px solid var(--line); margin-top:28px; background:#fff}
+.foot-inner{max-width:1100px; margin:0 auto; padding:16px 16px}
+.foot-site{display:inline-block; font-weight:800; text-decoration:none; color:var(--brand)}
 .foot-mid{
-  margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+  margin-top:12px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
 }
-.foot-brand{display:flex; align-items:center; gap:8px}
+.foot-brand{display:flex; align-items:center; gap:10px}
 .foot-badge img{width:28px; height:28px; display:block}
 .foot-word{font-weight:800; letter-spacing:.08em; color:var(--brand)}
-.foot-center{display:flex; flex-direction:column; gap:2px; color:var(--muted)}
+.foot-center{display:flex; flex-direction:column; gap:3px; color:var(--muted)}
 .backtotop{
-  padding:8px 12px; border-radius:12px; border:1px solid var(--line); background:#fff; cursor:pointer;
+  padding:10px 14px; border-radius:12px; border:1px solid var(--line); background:#fff; cursor:pointer;
 }
 .backtotop svg{vertical-align:middle; margin-left:6px}
 
-@media (min-width:720px){
+@media (min-width:860px){
   .cards{grid-template-columns:repeat(3,1fr)}
   .wins-grid{grid-template-columns:repeat(3,1fr)}
 }
 
-@media (max-width:719px){
+@media (max-width:859px){
+  .brand-badge,.brand-icon{width:42px; height:42px}
+  .cover-copy h1{font-size:36px}
   .pillars-band{grid-template-columns:repeat(2,1fr)}
 }
