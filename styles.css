@@ -1,0 +1,97 @@
+:root{
+  --bg:#0e0f11;
+  --panel:#ffffff;
+  --ink:#0c0d0f;
+  --muted:#4a5365;
+  --brand:#22263a;
+  --line:#e8ebf2;
+  --chip:#f5f7fb;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);
+  background:var(--panel);
+}
+
+/* header */
+.brochure-header{
+  position:sticky; top:0; z-index:20;
+  background:#ffffffcc;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.brand-line{
+  max-width:1100px; margin:0 auto; padding:12px 16px;
+  display:flex; align-items:center; gap:10px;
+  letter-spacing:.08em; font-weight:800; color:var(--brand);
+}
+.brand-badge{display:flex; align-items:center; justify-content:center; width:28px; height:28px}
+.brand-icon{width:28px; height:28px; display:block}
+.brand-word{font-size:14px}
+
+/* cover */
+.cover{position:relative; overflow:hidden; border-bottom:1px solid var(--line)}
+.cover-art{
+  height:110px; background:radial-gradient(800px 200px at 10% -30%, #e9eefb 10%, transparent 60%),
+              radial-gradient(900px 250px at 100% -40%, #e9eefb 10%, transparent 60%),
+              linear-gradient(#f7f9ff,#ffffff);
+}
+.cover-copy{max-width:1100px; margin:-40px auto 0; padding:0 16px 18px}
+.cover-copy h1{margin:0 0 8px; font-size:28px}
+.cover-copy p{margin:0; color:var(--muted); line-height:1.6}
+.invert{color:var(--ink)}
+
+/* pillars */
+.pillars-band{
+  max-width:1100px; margin:18px auto; padding:0 16px;
+  display:grid; grid-template-columns:repeat(6,1fr); gap:10px;
+}
+.pill{border:1px solid var(--line); border-radius:12px; padding:10px; background:#fff}
+.p-title{font-weight:700; font-size:13px}
+.p-desc{color:var(--muted); font-size:13px}
+
+/* wins/cards */
+.wins{max-width:1100px; margin:22px auto; padding:0 16px}
+.wins h2{margin:0 0 10px; font-size:20px}
+.wins-grid{display:grid; gap:10px}
+.win{border:1px solid var(--line); border-radius:12px; padding:12px; background:#fff}
+.win h4{margin:0 0 4px; font-size:14px}
+
+.cards{display:grid; gap:12px}
+.card{
+  border:1px solid var(--line); border-radius:14px; background:#fff; padding:14px;
+  box-shadow:0 4px 16px rgba(0,0,0,.04);
+}
+.card .p{font-weight:700; margin-bottom:6px}
+.card ul{margin:6px 0; padding-left:16px; color:var(--muted)}
+.card ul li{margin:4px 0}
+
+/* footer */
+.foot{border-top:1px solid var(--line); margin-top:24px; background:#fff}
+.foot-inner{max-width:1100px; margin:0 auto; padding:14px 16px}
+.foot-site{display:inline-block; font-weight:700; text-decoration:none; color:var(--brand)}
+.foot-mid{
+  margin-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+}
+.foot-brand{display:flex; align-items:center; gap:8px}
+.foot-badge img{width:28px; height:28px; display:block}
+.foot-word{font-weight:800; letter-spacing:.08em; color:var(--brand)}
+.foot-center{display:flex; flex-direction:column; gap:2px; color:var(--muted)}
+.backtotop{
+  padding:8px 12px; border-radius:12px; border:1px solid var(--line); background:#fff; cursor:pointer;
+}
+.backtotop svg{vertical-align:middle; margin-left:6px}
+
+@media (min-width:720px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .wins-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media (max-width:719px){
+  .pillars-band{grid-template-columns:repeat(2,1fr)}
+}

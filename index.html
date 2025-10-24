@@ -1,20 +1,176 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>LumiLedger — Funding Phases</title>
-    <meta name="description" content="From raw bank data into clear financial statements and KPIs, instantly." />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-    <!-- Use brochure global stylesheet -->
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <title>LumiLedger — Funding Phases</title>
+  <meta name="description" content="Three 3-month phases to complete build, scale to paying users, and expand nationally." />
+  <meta property="og:title" content="LumiLedger — Funding Phases" />
+  <meta property="og:description" content="Three 3-month phases to complete build, scale to paying users, and expand nationally." />
+  <meta name="theme-color" content="#0e0f11" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/assets/LumiLedgerlogo.png" imagesrcset="/assets/LumiLedgerlogo.png 1x" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/main.js"></script>
+</head>
+<body>
+  <script>
+    (function () {
+      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+      const toTop = () => window.scrollTo(0, 0);
+      toTop(); document.addEventListener("DOMContentLoaded", toTop, { once: true });
+      window.addEventListener("load", toTop, { once: true });
+      window.addEventListener("pageshow", e => { if (e.persisted) toTop(); });
+    })();
+  </script>
+
+  <!-- Header (same structure/classes as brochure) -->
+  <header class="brochure-header">
+    <div class="brand-line">
+      <span class="brand-badge" aria-hidden="true">
+        <img class="brand-icon" src="/assets/LumiLedgerlogo.png" alt="">
+      </span>
+      <div class="brand-word" aria-label="LumiLedger">LUMILEDGER</div>
+    </div>
+  </header>
+
+  <!-- Cover -->
+  <section id="overview" class="cover">
+    <div class="cover-art" aria-hidden="true"></div>
+    <div class="cover-copy invert">
+      <h1>Funding Plan: three 3-month phases to reach scale.</h1>
+      <p>Phase 1 completes the MVP with legal and launch prep. Phase 2 scales users and stabilizes infrastructure. Phase 3 expands nationally and prepares for Series-A readiness.</p>
+    </div>
+  </section>
+
+  <!-- Pillars band -->
+  <section class="pillars-band">
+    <div class="pill"><div class="p-title">Owner-first</div><div class="p-desc">Statement-grade clarity without heavy setup.</div></div>
+    <div class="pill"><div class="p-title">Memory + rules + AI</div><div class="p-desc">AI only when needed.</div></div>
+    <div class="pill"><div class="p-title">Two-sided GL</div><div class="p-desc">Balanced entries by design.</div></div>
+    <div class="pill"><div class="p-title">Low cost per user</div><div class="p-desc">Built for < $0.30/user at scale.</div></div>
+    <div class="pill"><div class="p-title">Rapid timeline</div><div class="p-desc">Each phase ships in ~90 days.</div></div>
+    <div class="pill"><div class="p-title">Secure by design</div><div class="p-desc">Bank-level practices.</div></div>
+  </section>
+
+  <!-- Phases as cards -->
+  <section id="phases" class="wins" style="border-bottom:1px solid var(--line);">
+    <h2>Use of funds by phase</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="p">Phase 1 — Build Round</div>
+        <ul>
+          <li><strong>Window:</strong> Q4 2025 (Oct–Dec)</li>
+          <li><strong>Raise:</strong> $150K–$250K</li>
+        </ul>
+        <ul>
+          <li><strong>Objectives</strong></li>
+          <li>Finalize MVP: stability, scalability, AI classification</li>
+          <li>Entity & policies: Terms, Privacy, liability coverage</li>
+          <li>Marketing launch prep + pilot onboarding</li>
+          <li>Founder runway for 3 months</li>
+        </ul>
+        <ul>
+          <li><strong>Use of funds</strong></li>
+          <li>Engineering & QA – $80K–$150K</li>
+          <li>Legal & Compliance – $7K–$15K</li>
+          <li>Marketing Launch – $15K–$25K</li>
+          <li>Founder/Ops (3 mo) – $9K–$15K</li>
+          <li>Contingency – ~$10K</li>
+        </ul>
+        <ul>
+          <li><strong>Deliverable:</strong> MVP complete, entity established, 50 pilots queued by Dec 2025</li>
+          <li><strong>Capital type:</strong> Prizes & forgivable/recoverable grants (non-dilutive)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="p">Phase 2 — Scale Round</div>
+        <ul>
+          <li><strong>Window:</strong> Q1 2026 (Jan–Mar)</li>
+          <li><strong>Raise:</strong> $300K–$500K</li>
+        </ul>
+        <ul>
+          <li><strong>Objectives</strong></li>
+          <li>Stabilize backend queues & monitoring</li>
+          <li>Acquire 1K–3K users via partnerships and paid</li>
+          <li>Hire 1 engineer + 1 growth/marketing role</li>
+          <li>Founder runway for 3 months</li>
+        </ul>
+        <ul>
+          <li><strong>Use of funds</strong></li>
+          <li>Operating Costs – $15K–$25K</li>
+          <li>Marketing & Growth – $30K–$50K</li>
+          <li>New Hires (2) – $60K–$100K</li>
+          <li>Founder (3 mo) – $15K–$20K</li>
+          <li>Working Capital – ~$50K</li>
+        </ul>
+        <ul>
+          <li><strong>Deliverable:</strong> 1K+ active users, first subscriptions, stable infra by Mar 2026</li>
+          <li><strong>Capital type:</strong> Convertible/recoverable grants; non-dilutive accelerators</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="p">Phase 3 — Expansion Round</div>
+        <ul>
+          <li><strong>Window:</strong> Q2 2026 (Apr–Jun)</li>
+          <li><strong>Raise:</strong> $750K–$1.2M</li>
+        </ul>
+        <ul>
+          <li><strong>Objectives</strong></li>
+          <li>National marketing & accountant partnerships</li>
+          <li>Team expansion: finance/ops + success/support</li>
+          <li>12–18 months runway for payroll & vendors</li>
+          <li>Advanced KPIs, integrations, and mobile</li>
+        </ul>
+        <ul>
+          <li><strong>Use of funds</strong></li>
+          <li>Runway & Payroll – $150K–$250K</li>
+          <li>Marketing Expansion – $80K–$150K</li>
+          <li>Team Growth – $150K–$300K</li>
+          <li>Product Expansion – ~$100K</li>
+        </ul>
+        <ul>
+          <li><strong>Deliverable:</strong> 10K+ users, profitability in sight, Series-A readiness by Jun 2026</li>
+          <li><strong>Capital type:</strong> Equity (SAFE/note) & strategic capital</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="wins">
+    <h2>Timeline</h2>
+    <div class="wins-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="win"><h4>Q4 2025</h4><p>Complete MVP + legal + pilot onboarding.</p></div>
+      <div class="win"><h4>Q1 2026</h4><p>1–3K users, subscriptions live, infra stabilized.</p></div>
+      <div class="win"><h4>Q2 2026</h4><p>10K users, profitability in sight, Series-A readiness.</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="foot-inner">
+      <a class="foot-site" href="https://LumiLedger.com" target="_blank" rel="noopener">LumiLedger.com</a>
+      <div class="foot-mid">
+        <div class="foot-brand">
+          <span class="foot-badge"><img src="/assets/LumiLedgerlogo.png" alt=""></span>
+          <span class="foot-word">LUMILEDGER</span>
+        </div>
+        <div class="foot-center">
+          <div class="foot-contact">Contact: <a href="mailto:alanson.stumler@lumiledger.com">alanson.stumler@lumiledger.com</a></div>
+          <div class="foot-copy">© <span id="yr">2025</span> LumiLedger</div>
+        </div>
+        <button class="backtotop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+          Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l7 7-1.4 1.4L13 10.8V19h-2v-8.2L6.4 13.4 5 12z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
