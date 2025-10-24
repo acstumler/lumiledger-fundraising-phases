@@ -1,3 +1,4 @@
+import React from "react";
 import PhaseCard from "../components/PhaseCard.jsx";
 
 const phases = [
