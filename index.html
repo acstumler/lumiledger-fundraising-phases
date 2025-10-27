@@ -43,13 +43,20 @@
     </div>
   </section>
 
-  <section class="pillars-band">
-    <div class="pill"><div class="p-title">Owner-first</div><div class="p-desc">Statement-grade clarity without heavy setup.</div></div>
-    <div class="pill"><div class="p-title">Memory + rules + AI</div><div class="p-desc">AI only when needed.</div></div>
-    <div class="pill"><div class="p-title">Two-sided GL</div><div class="p-desc">Balanced entries by design.</div></div>
-    <div class="pill"><div class="p-title">Low cost per user</div><div class="p-desc">Built for &lt;$0.30/user at scale.</div></div>
-    <div class="pill"><div class="p-title">Rapid timeline</div><div class="p-desc">Each phase ships in ~90 days.</div></div>
-    <div class="pill"><div class="p-title">Secure by design</div><div class="p-desc">Bank-level practices.</div></div>
+  <!-- Phase cards (replaces feature cards). Keep exact CSS; set 3 columns inline. -->
+  <section class="pillars-band" style="grid-template-columns:repeat(3,1fr)">
+    <div class="pill" data-phase="1" role="button" tabindex="0" aria-controls="phase-1">
+      <div class="p-title">Phase 1 — Build Round</div>
+      <div class="p-desc">Finish MVP, legal & policies, launch prep, and pilot onboarding. Target: Q4 2025.</div>
+    </div>
+    <div class="pill" data-phase="2" role="button" tabindex="0" aria-controls="phase-2">
+      <div class="p-title">Phase 2 — Scale Round</div>
+      <div class="p-desc">Stabilize infra; 1–3K users via partnerships and paid; key hires. Target: Q1 2026.</div>
+    </div>
+    <div class="pill" data-phase="3" role="button" tabindex="0" aria-controls="phase-3">
+      <div class="p-title">Phase 3 — Expansion Round</div>
+      <div class="p-desc">National marketing, team growth, 12–18 mo runway, Series-A readiness. Target: Q2 2026.</div>
+    </div>
   </section>
 
   <section id="phases" class="wins" style="border-bottom:1px solid var(--line);">
@@ -58,7 +65,7 @@
     <!-- Vertical accordion stack -->
     <div class="cards cards-accordion">
       <!-- Phase 1 -->
-      <details class="card card-accordion" data-phase="1">
+      <details class="card card-accordion" data-phase="1" id="phase-1">
         <summary class="accordion-summary">
           <span class="p">Phase 1 — Build Round</span>
           <span class="summary-meta">Window: Q4 2025 • Raise: $150K–$250K</span>
@@ -92,7 +99,7 @@
       </details>
 
       <!-- Phase 2 -->
-      <details class="card card-accordion" data-phase="2">
+      <details class="card card-accordion" data-phase="2" id="phase-2">
         <summary class="accordion-summary">
           <span class="p">Phase 2 — Scale Round</span>
           <span class="summary-meta">Window: Q1 2026 • Raise: $300K–$500K</span>
@@ -126,7 +133,7 @@
       </details>
 
       <!-- Phase 3 -->
-      <details class="card card-accordion" data-phase="3">
+      <details class="card card-accordion" data-phase="3" id="phase-3">
         <summary class="accordion-summary">
           <span class="p">Phase 3 — Expansion Round</span>
           <span class="summary-meta">Window: Q2 2026 • Raise: $750K–$1.2M</span>
