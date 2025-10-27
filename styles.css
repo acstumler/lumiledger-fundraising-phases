@@ -64,7 +64,7 @@ img,svg{ max-width:100%; height:auto; }
 .pillars-band{
   display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
   padding:18px 16px;
-  margin-top:-160px;
+  margin-top:-160px;                 /* overlap into gradient on desktop/tablet */
   position:relative; z-index:6;
   background:transparent;
   border:none;
@@ -80,7 +80,7 @@ img,svg{ max-width:100%; height:auto; }
   transition:transform .2s ease, box-shadow .2s ease;
   flex:1 1 320px;
   max-width:380px;
-  min-height:56px; /* mobile tap target */
+  min-height:56px;
 }
 .pill:hover{
   transform:translateY(-4px);
@@ -165,18 +165,18 @@ img,svg{ max-width:100%; height:auto; }
 }
 .backtotop:hover{background:#f5f5f7}
 
-/* Make accordion headings easier to tap */
+/* Accordion */
 .cards-accordion{grid-template-columns:1fr}
 .card-accordion{
   padding:0;
-  scroll-margin-top:92px; /* so sticky header doesn't cover scrolled target */
+  scroll-margin-top:92px;
 }
 .card-accordion > .accordion-summary{
   list-style:none;
   display:flex; flex-direction:column; gap:6px;
   padding:16px;
   cursor:pointer;
-  min-height:56px; /* finger-friendly */
+  min-height:56px;
 }
 .card-accordion > .accordion-summary::-webkit-details-marker{display:none}
 .card-accordion .summary-meta{color:var(--muted); font-size:clamp(.92rem,2.8vw,1rem)}
@@ -196,8 +196,9 @@ img,svg{ max-width:100%; height:auto; }
 
 @media (max-width:740px){
   .cover-copy{margin-left:18px;padding:56px 16px}
+  .cover{ padding-bottom:110px; }       /* less space below hero on phones */
   .pillars-band{
-    margin-top:-100px;
+    margin-top:-170px;                  /* closer to the title on phones */
     padding:14px 16px;
     gap:12px;
   }
