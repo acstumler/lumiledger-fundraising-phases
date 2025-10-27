@@ -55,86 +55,108 @@
   <section id="phases" class="wins" style="border-bottom:1px solid var(--line);">
     <h2>Use of funds by phase</h2>
 
-    <div class="cards">
-      <div class="card">
-        <div class="p">Phase 1 — Build Round</div>
-        <ul>
-          <li><strong>Window:</strong> Q4 2025 (Oct–Dec)</li>
-          <li><strong>Raise:</strong> $150K–$250K</li>
-        </ul>
-        <ul>
-          <li><strong>Objectives</strong></li>
-          <li>Finalize MVP: stability, scalability, AI classification</li>
-          <li>Entity & policies: Terms, Privacy, liability coverage</li>
-          <li>Marketing launch prep + pilot onboarding</li>
-          <li>Founder runway for 3 months</li>
-        </ul>
-        <ul>
-          <li><strong>Use of funds</strong></li>
-          <li>Engineering & QA – $80K–$150K</li>
-          <li>Legal & Compliance – $7K–$15K</li>
-          <li>Marketing Launch – $15K–$25K</li>
-          <li>Founder/Ops (3 mo) – $9K–$15K</li>
-          <li>Contingency – ~$10K</li>
-        </ul>
-        <ul>
-          <li><strong>Deliverable:</strong> MVP complete, entity established, 50 pilots queued by Dec 2025</li>
-          <li><strong>Capital type:</strong> Prizes & forgivable/recoverable grants (non-dilutive)</li>
-        </ul>
-      </div>
+    <!-- Vertical accordion stack -->
+    <div class="cards cards-accordion">
+      <!-- Phase 1 -->
+      <details class="card card-accordion" data-phase="1">
+        <summary class="accordion-summary">
+          <span class="p">Phase 1 — Build Round</span>
+          <span class="summary-meta">Window: Q4 2025 • Raise: $150K–$250K</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q4 2025 (Oct–Dec)</li>
+            <li><strong>Raise:</strong> $150K–$250K</li>
+          </ul>
+          <ul>
+            <li><strong>Objectives</strong></li>
+            <li>Finalize MVP: stability, scalability, AI classification</li>
+            <li>Entity & policies: Terms, Privacy, liability coverage</li>
+            <li>Marketing launch prep + pilot onboarding</li>
+            <li>Founder runway for 3 months</li>
+          </ul>
+          <ul>
+            <li><strong>Use of funds</strong></li>
+            <li>Engineering & QA – $80K–$150K</li>
+            <li>Legal & Compliance – $7K–$15K</li>
+            <li>Marketing Launch – $15K–$25K</li>
+            <li>Founder/Ops (3 mo) – $9K–$15K</li>
+            <li>Contingency – ~$10K</li>
+          </ul>
+          <ul>
+            <li><strong>Deliverable:</strong> MVP complete, entity established, 50 pilots queued by Dec 2025</li>
+            <li><strong>Capital type:</strong> Prizes & forgivable/recoverable grants (non-dilutive)</li>
+          </ul>
+        </div>
+      </details>
 
-      <div class="card">
-        <div class="p">Phase 2 — Scale Round</div>
-        <ul>
-          <li><strong>Window:</strong> Q1 2026 (Jan–Mar)</li>
-          <li><strong>Raise:</strong> $300K–$500K</li>
-        </ul>
-        <ul>
-          <li><strong>Objectives</strong></li>
-          <li>Stabilize backend queues & monitoring</li>
-          <li>Acquire 1K–3K users via partnerships and paid</li>
-          <li>Hire 1 engineer + 1 growth/marketing role</li>
-          <li>Founder runway for 3 months</li>
-        </ul>
-        <ul>
-          <li><strong>Use of funds</strong></li>
-          <li>Operating Costs – $15K–$25K</li>
-          <li>Marketing & Growth – $30K–$50K</li>
-          <li>New Hires (2) – $60K–$100K</li>
-          <li>Founder (3 mo) – $15K–$20K</li>
-          <li>Working Capital – ~$50K</li>
-        </ul>
-        <ul>
-          <li><strong>Deliverable:</strong> 1K+ active users, first subscriptions, stable infra by Mar 2026</li>
-          <li><strong>Capital type:</strong> Convertible/recoverable grants; non-dilutive accelerators</li>
-        </ul>
-      </div>
+      <!-- Phase 2 -->
+      <details class="card card-accordion" data-phase="2">
+        <summary class="accordion-summary">
+          <span class="p">Phase 2 — Scale Round</span>
+          <span class="summary-meta">Window: Q1 2026 • Raise: $300K–$500K</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q1 2026 (Jan–Mar)</li>
+            <li><strong>Raise:</strong> $300K–$500K</li>
+          </ul>
+          <ul>
+            <li><strong>Objectives</strong></li>
+            <li>Stabilize backend queues & monitoring</li>
+            <li>Acquire 1K–3K users via partnerships and paid</li>
+            <li>Hire 1 engineer + 1 growth/marketing role</li>
+            <li>Founder runway for 3 months</li>
+          </ul>
+          <ul>
+            <li><strong>Use of funds</strong></li>
+            <li>Operating Costs – $15K–$25K</li>
+            <li>Marketing & Growth – $30K–$50K</li>
+            <li>New Hires (2) – $60K–$100K</li>
+            <li>Founder (3 mo) – $15K–$20K</li>
+            <li>Working Capital – ~$50K</li>
+          </ul>
+          <ul>
+            <li><strong>Deliverable:</strong> 1K+ active users, first subscriptions, stable infra by Mar 2026</li>
+            <li><strong>Capital type:</strong> Convertible/recoverable grants; non-dilutive accelerators</li>
+          </ul>
+        </div>
+      </details>
 
-      <div class="card">
-        <div class="p">Phase 3 — Expansion Round</div>
-        <ul>
-          <li><strong>Window:</strong> Q2 2026 (Apr–Jun)</li>
-          <li><strong>Raise:</strong> $750K–$1.2M</li>
-        </ul>
-        <ul>
-          <li><strong>Objectives</strong></li>
-          <li>National marketing & accountant partnerships</li>
-          <li>Team expansion: finance/ops + success/support</li>
-          <li>12–18 months runway for payroll & vendors</li>
-          <li>Advanced KPIs, integrations, and mobile</li>
-        </ul>
-        <ul>
-          <li><strong>Use of funds</strong></li>
-          <li>Runway & Payroll – $150K–$250K</li>
-          <li>Marketing Expansion – $80K–$150K</li>
-          <li>Team Growth – $150K–$300K</li>
-          <li>Product Expansion – ~$100K</li>
-        </ul>
-        <ul>
-          <li><strong>Deliverable:</strong> 10K+ users, profitability in sight, Series-A readiness by Jun 2026</li>
-          <li><strong>Capital type:</strong> Equity (SAFE/note) & strategic capital</li>
-        </ul>
-      </div>
+      <!-- Phase 3 -->
+      <details class="card card-accordion" data-phase="3">
+        <summary class="accordion-summary">
+          <span class="p">Phase 3 — Expansion Round</span>
+          <span class="summary-meta">Window: Q2 2026 • Raise: $750K–$1.2M</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q2 2026 (Apr–Jun)</li>
+            <li><strong>Raise:</strong> $750K–$1.2M</li>
+          </ul>
+          <ul>
+            <li><strong>Objectives</strong></li>
+            <li>National marketing & accountant partnerships</li>
+            <li>Team expansion: finance/ops + success/support</li>
+            <li>12–18 months runway for payroll & vendors</li>
+            <li>Advanced KPIs, integrations, and mobile</li>
+          </ul>
+          <ul>
+            <li><strong>Use of funds</strong></li>
+            <li>Runway & Payroll – $150K–$250K</li>
+            <li>Marketing Expansion – $80K–$150K</li>
+            <li>Team Growth – $150K–$300K</li>
+            <li>Product Expansion – ~$100K</li>
+          </ul>
+          <ul>
+            <li><strong>Deliverable:</strong> 10K+ users, profitability in sight, Series-A readiness by Jun 2026</li>
+            <li><strong>Capital type:</strong> Equity (SAFE/note) & strategic capital</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
