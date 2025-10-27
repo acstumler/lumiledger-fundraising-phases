@@ -64,7 +64,7 @@ img,svg{ max-width:100%; height:auto; }
 .pillars-band{
   display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
   padding:18px 16px;
-  margin-top:-160px;                 /* overlap into gradient on desktop/tablet */
+  margin-top:-160px;                 /* desktop/tablet overlap */
   position:relative; z-index:6;
   background:transparent;
   border:none;
@@ -195,11 +195,12 @@ img,svg{ max-width:100%; height:auto; }
 }
 
 @media (max-width:740px){
-  .cover-copy{margin-left:18px;padding:56px 16px}
-  .cover{ padding-bottom:110px; }       /* less space below hero on phones */
+  .cover-copy{margin-left:18px;padding:52px 16px}  /* slightly less top padding */
+  .cover-copy h1{ margin-bottom:4px; }             /* tighten under the title */
+  .cover{ padding-bottom:70px; }                   /* much less space under hero */
   .pillars-band{
-    margin-top:-170px;                  /* closer to the title on phones */
-    padding:14px 16px;
+    margin-top:-240px;                             /* pull cards right under title */
+    padding:12px 16px;
     gap:12px;
   }
   .pill{
