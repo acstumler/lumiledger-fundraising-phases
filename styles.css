@@ -44,7 +44,6 @@ img,svg{ max-width:100%; height:auto; }
   min-height:68vh;
   border-bottom:1px solid var(--line);
   overflow:hidden;
-  /* extra space so the overlapping cards don't collide with content below */
   padding-bottom:140px;
 }
 .cover-art{
@@ -54,20 +53,17 @@ img,svg{ max-width:100%; height:auto; }
 }
 .cover-copy{position:relative;max-width:820px;padding:84px 28px;margin-left:clamp(18px,7vw,120px)}
 .cover-copy.invert h1{color:#fff}
-.cover-copy.invert p{color:rgba(255,255,255,.88)}
 .cover-copy h1{margin:0 0 10px 0;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.08;font-weight:900}
-.cover-copy p{margin:0 0 18px 0;color:var(--muted);font-size:1.05rem}
 
-/* Phase cards band — overlap hero and center */
+/* Phase cards in hero */
 .pillars-band{
   display:flex; flex-wrap:wrap; justify-content:center; gap:20px;
   padding:22px 40px;
-  margin-top:-160px;                 /* higher into the gradient */
+  margin-top:-160px;
   position:relative; z-index:6;
-  background:transparent;            /* show gradient through gaps */
-  border:none;                       /* cleaner edge */
+  background:transparent;
+  border:none;
 }
-/* Glassy cards */
 .pill{
   background:rgba(255,255,255,0.92);
   backdrop-filter:saturate(140%) blur(8px);
@@ -77,7 +73,7 @@ img,svg{ max-width:100%; height:auto; }
   padding:16px 18px;
   box-shadow:0 8px 28px rgba(14,15,17,.08);
   transition:transform .2s ease, box-shadow .2s ease;
-  flex:1 1 320px;                    /* grow but never too small */
+  flex:1 1 320px;
   max-width:380px;
 }
 .pill:hover{
@@ -163,16 +159,13 @@ img,svg{ max-width:100%; height:auto; }
 }
 .backtotop:hover{background:#f5f5f7}
 
-@media (max-width:1200px){
-  /* keep three cards across when room allows */
-}
 @media (max-width:740px){
   .cover-copy{margin-left:18px;padding:66px 18px}
   .how-grid{grid-template-columns:1fr}
   .wins-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .pillars-band{
-    margin-top:-100px;             /* slightly less overlap on small screens */
+    margin-top:-100px;
     padding:18px;
   }
   .pill{

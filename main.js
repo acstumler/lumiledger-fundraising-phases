@@ -2,6 +2,7 @@
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
 
+  // Open matching accordion when a phase pill is clicked or focused + Enter
   var pills = document.querySelectorAll('.pill[data-phase]');
   var accordions = document.querySelectorAll('.card-accordion');
 
@@ -20,12 +21,14 @@
     });
   });
 
+  // Allow only one accordion open at a time when user toggles directly
   accordions.forEach(function (d) {
     d.addEventListener('toggle', function () {
       if (d.open) accordions.forEach(function (o) { if (o !== d) o.open = false; });
     });
   });
 
+  // Ensure Phase 1 is open on load
   document.addEventListener('DOMContentLoaded', function () {
     accordions.forEach(function (d) { d.open = d.getAttribute('data-phase') === '1'; });
   });
