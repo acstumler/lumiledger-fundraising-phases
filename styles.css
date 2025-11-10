@@ -47,7 +47,7 @@ img,svg{max-width:100%;height:auto}
 .cover-copy.invert p{color:rgba(255,255,255,.88)}
 .cover-copy h1{margin:0 0 10px 0;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.08;font-weight:900}
 
-/* Phase pills (centered row) */
+/* Phase “pills” */
 .pillars-band{
   display:grid;
   grid-template-columns:repeat(3,minmax(260px,360px));
@@ -65,12 +65,14 @@ img,svg{max-width:100%;height:auto}
 /* Sections */
 .wins{padding:56px 22px;border-bottom:1px solid var(--line);background:#fff}
 .wins h2{max-width:1100px;margin:0 auto 14px auto;font-weight:900}
-.cards{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+/* STACKED Cards + Accordion (single column at all widths) */
+.cards{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:16px}
 .card{border:1px solid var(--line);border-radius:16px;background:#fff;padding:0;box-shadow:0 10px 22px rgba(10,22,60,.04)}
 .card .p{font-weight:900}
 
 /* Accordion */
-.cards-accordion{grid-template-columns:repeat(3,1fr)}
+.cards-accordion{grid-template-columns:1fr}
 .card-accordion{scroll-margin-top:92px}
 .card-accordion > .accordion-summary{
   list-style:none;
@@ -134,14 +136,12 @@ img,svg{max-width:100%;height:auto}
 }
 .backtotop:hover{background:#f5f5f7}
 
-/* Responsive */
-@media (max-width:1200px){
-  .cards-accordion{grid-template-columns:1fr}
+/* Responsive (cards already stacked; timeline collapses on small) */
+@media (max-width:900px){
+  .wins-grid{grid-template-columns:1fr}
 }
 @media (max-width:740px){
   .cover-copy{margin-left:18px;padding:66px 18px}
-  .wins-grid{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
   .pillars-band{grid-template-columns:1fr}
   .foot-mid{grid-template-columns:1fr;row-gap:10px;min-height:auto}
   .foot-brand{justify-self:center; justify-content:center}
