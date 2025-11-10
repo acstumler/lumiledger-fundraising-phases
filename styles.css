@@ -39,29 +39,82 @@ img,svg{ max-width:100%; height:auto; }
 .brand-icon{height:40px;width:auto;display:block}
 .brand-word{font-weight:900;letter-spacing:.06em;font-size:clamp(1.4rem,4vw,2.4rem);line-height:1}
 
+/* ----------------------------------------------------------
+   ELITE HERO UPGRADE
+---------------------------------------------------------- */
 .cover{
   position:relative;
   min-height:68vh;
-  border-bottom:1px solid var(--line);
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  border-bottom:none;
   padding-bottom:140px;
+}
+.cover::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 20% 40%,rgba(255,255,255,.08) 0%,transparent 60%),
+             radial-gradient(circle at 80% 60%,rgba(255,255,255,.06) 0%,transparent 55%);
+  mix-blend-mode:overlay;
 }
 .cover-art{
   position:absolute;inset:0;
-  background:linear-gradient(120deg,var(--gradA),var(--gradB));
-  mask-image:linear-gradient(100deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.75) 55%,rgba(0,0,0,.25) 78%,rgba(0,0,0,0) 100%)
+  background:linear-gradient(115deg,var(--gradA) 0%,#5c72ff 40%,var(--gradB) 100%);
+  animation:gradientShift 12s ease-in-out infinite alternate;
 }
-.cover-copy{position:relative;max-width:820px;padding:72px 18px;margin-left:clamp(18px,7vw,120px)}
-.cover-copy.invert h1{color:#fff}
-.cover-copy.invert p{color:rgba(255,255,255,.88)}
-.cover-copy h1{
-  margin:0 0 8px 0;
-  font-size:clamp(1.8rem,7vw,3.6rem);
-  line-height:1.08;
+@keyframes gradientShift{
+  0%{transform:scale(1) translate(0,0)}
+  100%{transform:scale(1.1) translate(-2%,2%)}
+}
+.cover-copy{
+  position:relative;
+  max-width:820px;
+  padding:72px 18px;
+  margin-left:clamp(18px,7vw,120px);
+  z-index:2;
+}
+.cover-copy.invert h1{
+  color:#fff;
+  font-size:clamp(2.2rem,7vw,4.2rem);
   font-weight:900;
+  letter-spacing:-0.015em;
+  line-height:1.08;
+  text-shadow:0 4px 20px rgba(0,0,0,.25);
+  margin:0 0 10px 0;
+}
+.cover-copy.invert p{
+  color:rgba(255,255,255,.9);
+  font-size:1.15rem;
+  max-width:740px;
+  line-height:1.55;
+  margin:0 0 28px 0;
+}
+.cover-copy .hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.cover-copy .hero-buttons a{
+  background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  padding:10px 22px;
+  border-radius:12px;
+  backdrop-filter:blur(6px);
+  transition:background .2s ease,transform .2s ease;
+}
+.cover-copy .hero-buttons a:hover{
+  background:rgba(255,255,255,.3);
+  transform:translateY(-2px);
 }
 
-/* Phase cards in hero */
+/* ----------------------------------------------------------
+   Phase cards in hero
+---------------------------------------------------------- */
 .pillars-band{
   display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
   padding:18px 16px;
@@ -90,6 +143,9 @@ img,svg{ max-width:100%; height:auto; }
 .p-title{font-weight:900;font-size:1rem;margin-bottom:4px}
 .p-desc{color:var(--muted);font-size:.95rem;line-height:1.45}
 
+/* ----------------------------------------------------------
+   Wins / Cards / Accordion
+---------------------------------------------------------- */
 .wins{padding:56px 22px;border-bottom:1px solid var(--line);background:#fff}
 .wins h2{max-width:1100px;margin:0 auto 14px auto;font-weight:900}
 .wins-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -126,7 +182,9 @@ img,svg{ max-width:100%; height:auto; }
 .card-accordion[open] .chev{ transform:rotate(45deg) }
 .card-accordion .card-body{ padding:0 16px 16px 16px }
 
-/* Footer */
+/* ----------------------------------------------------------
+   Footer
+---------------------------------------------------------- */
 .foot{
   padding:28px 22px calc(28px + var(--safe-bottom)) 22px;
   background:#fff; border-top:1px solid var(--line);
@@ -163,7 +221,9 @@ img,svg{ max-width:100%; height:auto; }
 }
 .backtotop:hover{background:#f5f5f7}
 
-/* Responsive tweaks */
+/* ----------------------------------------------------------
+   Responsive tweaks
+---------------------------------------------------------- */
 @media (max-width:900px){
   .wins-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
