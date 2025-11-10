@@ -91,18 +91,18 @@ img,svg{max-width:100%;height:auto}
 }
 .card-accordion[open] .chev{ transform:rotate(45deg) }
 
-/* SPACING — tighter gap between summary and bullets (all phases) */
+/* SPACING — smallest gap between summary and bullets (all phases) */
 .card-accordion .card-body{
-  padding:6px 16px 16px 16px;   /* was 12px top */
+  padding:2px 16px 16px 16px;  /* ↓ from 6px top */
 }
 .card-accordion .card-body > ul{
-  margin:6px 0;                 /* was 8px */
+  margin:4px 0;               /* ↓ from 6px */
 }
 .card-accordion .card-body > ul + ul{
-  margin-top:8px;               /* was 12px */
+  margin-top:6px;             /* ↓ from 8px */
 }
 .card-accordion .card-body li{
-  margin:6px 0;
+  margin:4px 0;               /* ↓ from 6px */
 }
 
 /* Timeline */
