@@ -27,7 +27,7 @@
   </script>
 
   <header class="brochure-header">
-    <div class="container brand-line">
+    <div class="brand-line">
       <span class="brand-badge" aria-hidden="true">
         <img class="brand-icon" src="/assets/LumiLedgerlogo.png" alt="">
       </span>
@@ -35,168 +35,165 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (matches brochure UI) -->
   <section id="overview" class="cover">
     <div class="cover-art" aria-hidden="true"></div>
-    <div class="container cover-copy invert">
+    <div class="cover-copy invert">
       <h1>Funding plan to scale LumiLedger.</h1>
       <p>A clear, three-phase path: legal foundation and engineering hardening, go-to-market activation, and an official launch with subscription-required access and measured growth.</p>
-      <div class="hero-buttons">
-        <a href="#phases">See phases</a>
-        <a href="#timeline">View timeline</a>
-      </div>
+      <p>
+        <a href="#phases">See the phases</a> &nbsp; &nbsp; <a href="#timeline">View the timeline</a>
+      </p>
     </div>
   </section>
 
-  <!-- Phase pills -->
-  <section class="pillars-wrap">
-    <div class="container pillars-band" style="grid-template-columns:repeat(3,1fr)">
-      <div class="pill" data-phase="1" role="button" tabindex="0" aria-controls="phase-1">
-        <div class="p-title">Phase 1 — Build Round</div>
-        <div class="p-desc">Legal foundation followed by engineering hardening to advance a compliant and scalable financial data platform. Target completion: Q4 2025.</div>
-      </div>
-      <div class="pill" data-phase="2" role="button" tabindex="0" aria-controls="phase-2">
-        <div class="p-title">Phase 2 — Scale Round</div>
-        <div class="p-desc">Activate go-to-market: heavier marketing, grassroots networking, and live user demoing. Enable subscriptions and refine onboarding. Target completion: Q1 2026.</div>
-      </div>
-      <div class="pill" data-phase="3" role="button" tabindex="0" aria-controls="phase-3">
-        <div class="p-title">Phase 3 — Expansion Round</div>
-        <div class="p-desc">Official launch with subscription-required access, operations in full swing, and growth markers for marketing and revenue. Target completion: Q2 2026.</div>
-      </div>
+  <!-- Phase cards row (uses brochure grid) -->
+  <section class="pillars-band">
+    <div class="pill" data-phase="1" role="button" tabindex="0" aria-controls="phase-1">
+      <div class="p-title">Phase 1 — Build Round</div>
+      <div class="p-desc">Legal foundation followed by engineering hardening to advance a compliant and scalable financial data platform. Target completion: Q4 2025.</div>
+    </div>
+    <div class="pill" data-phase="2" role="button" tabindex="0" aria-controls="phase-2">
+      <div class="p-title">Phase 2 — Scale Round</div>
+      <div class="p-desc">Activate go-to-market: heavier marketing, grassroots networking, and live user demoing. Enable subscriptions and refine onboarding. Target completion: Q1 2026.</div>
+    </div>
+    <div class="pill" data-phase="3" role="button" tabindex="0" aria-controls="phase-3">
+      <div class="p-title">Phase 3 — Expansion Round</div>
+      <div class="p-desc">Official launch with subscription-required access, operations in full swing, and growth markers for marketing and revenue. Target completion: Q2 2026.</div>
     </div>
   </section>
 
+  <!-- Phases (accordion cards) -->
   <section id="phases" class="wins">
-    <div class="container">
-      <h2>Focus & Outcomes by phase</h2>
+    <h2>Focus & Outcomes by phase</h2>
 
-      <div class="cards cards-accordion">
-        <!-- Phase 1 -->
-        <details class="card card-accordion" data-phase="1" id="phase-1" open>
-          <summary class="accordion-summary">
-            <span class="p">Phase 1 — Build Round</span>
-            <span class="summary-meta">Window: Q4 2025 • Target Completion: Q4 2025</span>
-            <span class="chev" aria-hidden="true"></span>
-          </summary>
-          <div class="card-body">
-            <ul class="kv">
-              <li><strong>Window:</strong> Q4 2025 (Oct–Dec)</li>
-              <li><strong>Target Completion:</strong> Q4 2025</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Objective</strong></li>
-              <li>Lay the legal, structural, and technical groundwork for LumiLedger—protecting IP while advancing toward a secure, market-ready release as a compliant and scalable financial data platform.</li>
-            </ul>
-            <ul class="bullets">
-              <li><em>Legal & Compliance Foundation:</em> Engage counsel to finalize corporate structure; file copyrights and trademarks; and draft NDAs, partner agreements, privacy policy, terms of service, and data-use agreements for integrations (e.g., Plaid, Stripe).</li>
-              <li><em>Operational Readiness:</em> Create disclosure and collaboration frameworks to safely work with external professionals during development.</li>
-              <li><em>Engineering & Technical Validation:</em> Once NDAs are in place, bring in experienced engineers to review architecture, security, data handling, and performance; remediate blind spots; and harden the codebase for reliability and scalability.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Funding Use</strong></li>
-              <li>Finance the legal, compliance, and early engineering refinement necessary to safeguard LumiLedger’s technology, brand, and data systems and to move confidently into broader engineering work.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Outcome</strong></li>
-              <li>A protected, compliant, and technically validated foundation—ready for Phase 2 scaling and external pilot deployments.</li>
-            </ul>
-          </div>
-        </details>
+    <div class="cards cards-accordion">
+      <!-- Phase 1 -->
+      <details class="card card-accordion" data-phase="1" id="phase-1" open>
+        <summary class="accordion-summary">
+          <span class="p">Phase 1 — Build Round</span>
+          <span class="summary-meta">Window: Q4 2025 • Target Completion: Q4 2025</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q4 2025 (Oct–Dec)</li>
+            <li><strong>Target Completion:</strong> Q4 2025</li>
+          </ul>
+          <ul>
+            <li><strong>Objective</strong></li>
+            <li>Lay the legal, structural, and technical groundwork for LumiLedger—protecting IP while advancing toward a secure, market-ready release as a compliant and scalable financial data platform.</li>
+          </ul>
+          <ul>
+            <li><strong>Key Workstreams</strong></li>
+            <li><em>Legal & Compliance Foundation:</em> Engage counsel to finalize corporate structure; file copyrights and trademarks; and draft NDAs, partner agreements, privacy policy, terms of service, and data-use agreements for integrations (e.g., Plaid, Stripe).</li>
+            <li><em>Operational Readiness:</em> Create disclosure and collaboration frameworks to safely work with external professionals during development.</li>
+            <li><em>Engineering & Technical Validation:</em> Once NDAs are in place, bring in experienced engineers to review architecture, security, data handling, and performance; remediate blind spots; and harden the codebase for reliability and scalability.</li>
+          </ul>
+          <ul>
+            <li><strong>Funding Use</strong></li>
+            <li>Finance the legal, compliance, and early engineering refinement necessary to safeguard LumiLedger’s technology, brand, and data systems and to move confidently into broader engineering work.</li>
+          </ul>
+          <ul>
+            <li><strong>Outcome</strong></li>
+            <li>A protected, compliant, and technically validated foundation—ready for Phase 2 scaling and external pilot deployments.</li>
+          </ul>
+        </div>
+      </details>
 
-        <!-- Phase 2 -->
-        <details class="card card-accordion" data-phase="2" id="phase-2">
-          <summary class="accordion-summary">
-            <span class="p">Phase 2 — Scale Round</span>
-            <span class="summary-meta">Window: Q1 2026 • Target Completion: Q1 2026</span>
-            <span class="chev" aria-hidden="true"></span>
-          </summary>
-          <div class="card-body">
-            <ul class="kv">
-              <li><strong>Window:</strong> Q1 2026 (Jan–Mar)</li>
-              <li><strong>Target Completion:</strong> Q1 2026</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Objective</strong></li>
-              <li>Activate go-to-market and user acquisition: heavier marketing, grassroots networking, and live user demoing—while enabling subscriptions and refining onboarding.</li>
-            </ul>
-            <ul class="bullets">
-              <li><em>Marketing & Awareness:</em> Targeted campaigns, content, and events; community building through grassroots networking and advisor circles.</li>
-              <li><em>Live Demoing & Pilot Cohorts:</em> Hands-on demos and office-hour walkthroughs; early-adopter cohorts for feedback and references.</li>
-              <li><em>Onboarding & Activation:</em> Streamline signup, data linking (e.g., Plaid), and first-week guidance; tighten success ops and support.</li>
-              <li><em>Subscriptions & Billing:</em> Switch on paid subscriptions; implement billing operations and dunning; tune pricing/packaging based on live signals.</li>
-              <li><em>Scale Readiness:</em> Ongoing stability/performance hardening and analytics instrumentation for growth.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Funding Use</strong></li>
-              <li>Finance go-to-market execution—campaigns, demo programs, community outreach, and onboarding improvements—plus the subscription/billing enablement required to begin monetization.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Outcome</strong></li>
-              <li>Early-thousands active users, paid subscriptions live, repeatable demo-to-activation motions, and a stable system prepared for broader national expansion in Phase 3.</li>
-            </ul>
-          </div>
-        </details>
+      <!-- Phase 2 -->
+      <details class="card card-accordion" data-phase="2" id="phase-2">
+        <summary class="accordion-summary">
+          <span class="p">Phase 2 — Scale Round</span>
+          <span class="summary-meta">Window: Q1 2026 • Target Completion: Q1 2026</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q1 2026 (Jan–Mar)</li>
+            <li><strong>Target Completion:</strong> Q1 2026</li>
+          </ul>
+          <ul>
+            <li><strong>Objective</strong></li>
+            <li>Activate go-to-market and user acquisition: heavier marketing, grassroots networking, and live user demoing—while enabling subscriptions and refining onboarding.</li>
+          </ul>
+          <ul>
+            <li><strong>Key Workstreams</strong></li>
+            <li><em>Marketing & Awareness:</em> Targeted campaigns, content, and events; community building through grassroots networking and advisor circles.</li>
+            <li><em>Live Demoing & Pilot Cohorts:</em> Hands-on demos and office-hour walkthroughs; early-adopter cohorts for feedback and references.</li>
+            <li><em>Onboarding & Activation:</em> Streamline signup flows, data linking (e.g., Plaid), and first-week guidance; tighten success ops and support.</li>
+            <li><em>Subscriptions & Billing:</em> Switch on paid subscriptions; implement billing operations and dunning; tune pricing/packaging based on live signals.</li>
+            <li><em>Scale Readiness:</em> Continue stability/performance hardening and analytics instrumentation for growth.</li>
+          </ul>
+          <ul>
+            <li><strong>Funding Use</strong></li>
+            <li>Finance go-to-market execution—campaigns, demo programs, community outreach, and onboarding improvements—plus the subscription/billing enablement required to begin monetization.</li>
+          </ul>
+          <ul>
+            <li><strong>Outcome</strong></li>
+            <li>Early-thousands active users, paid subscriptions live, repeatable demo-to-activation motions, and a stable system prepared for broader national expansion in Phase 3.</li>
+          </ul>
+        </div>
+      </details>
 
-        <!-- Phase 3 -->
-        <details class="card card-accordion" data-phase="3" id="phase-3">
-          <summary class="accordion-summary">
-            <span class="p">Phase 3 — Expansion Round</span>
-            <span class="summary-meta">Window: Q2 2026 • Target Completion: Q2 2026</span>
-            <span class="chev" aria-hidden="true"></span>
-          </summary>
-          <div class="card-body">
-            <ul class="kv">
-              <li><strong>Window:</strong> Q2 2026 (Apr–Jun)</li>
-              <li><strong>Target Completion:</strong> Q2 2026</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Objective</strong></li>
-              <li>Execute the official go-to-market launch: subscription-required access, full operational cadence, and clear growth markers for marketing and revenue.</li>
-            </ul>
-            <ul class="bullets">
-              <li><em>Launch & Distribution:</em> Public availability with coordinated campaigns, partner announcements, and advisor-channel amplification.</li>
-              <li><em>Operations at Scale:</em> Daily support and success operations; monitor SLAs, error budgets, incident response; tighter onboarding SLAs.</li>
-              <li><em>Revenue Systems:</em> Enforce subscription-required access; refine pricing & packaging; dashboards for MRR/ARR, churn, payback.</li>
-              <li><em>Partner Ecosystem:</em> Formalize advisor/CPA partners and referrals; expand integrations that drive adoption and retention.</li>
-              <li><em>Product Growth:</em> Ship high-impact enhancements (analytics/KPIs, integrations, mobile) based on live feedback and cohort analysis.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Funding Use</strong></li>
-              <li>Provide early operations support—launch execution, customer success, infrastructure/reliability work, and the initial growth activities to establish consistent revenue momentum.</li>
-            </ul>
-            <ul class="kv">
-              <li><strong>Outcome</strong></li>
-              <li>Official launch completed with subscription-required usage, operations in full swing, and marketing/revenue KPIs trending upward—positioning LumiLedger for sustained national growth beyond Phase 3.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
+      <!-- Phase 3 -->
+      <details class="card card-accordion" data-phase="3" id="phase-3">
+        <summary class="accordion-summary">
+          <span class="p">Phase 3 — Expansion Round</span>
+          <span class="summary-meta">Window: Q2 2026 • Target Completion: Q2 2026</span>
+          <span class="chev" aria-hidden="true"></span>
+        </summary>
+        <div class="card-body">
+          <ul>
+            <li><strong>Window:</strong> Q2 2026 (Apr–Jun)</li>
+            <li><strong>Target Completion:</strong> Q2 2026</li>
+          </ul>
+          <ul>
+            <li><strong>Objective</strong></li>
+            <li>Execute the official go-to-market launch: subscription-required access, full operational cadence, and clear growth markers for marketing and revenue.</li>
+          </ul>
+          <ul>
+            <li><strong>Key Workstreams</strong></li>
+            <li><em>Launch & Distribution:</em> Public availability with coordinated campaigns, partner announcements, and advisor-channel amplification.</li>
+            <li><em>Operations at Scale:</em> Daily support and success operations; monitor SLAs, error budgets, and incident response; tighten onboarding SLAs.</li>
+            <li><em>Revenue Systems:</em> Enforce subscription-required access; refine pricing & packaging; dashboards for MRR/ARR, churn, payback.</li>
+            <li><em>Partner Ecosystem:</em> Formalize advisor/CPA partners and referrals; expand integrations that drive adoption and retention.</li>
+            <li><em>Product Growth:</em> Ship high-impact enhancements (analytics/KPIs, integrations, mobile) based on live user feedback and cohort analysis.</li>
+          </ul>
+          <ul>
+            <li><strong>Funding Use</strong></li>
+            <li>Provide early operations support—launch execution, customer success, infrastructure/reliability work, and the initial growth activities required to establish consistent revenue momentum.</li>
+          </ul>
+          <ul>
+            <li><strong>Outcome</strong></li>
+            <li>Official launch completed with subscription-required usage, operations in full swing, and marketing/revenue KPIs trending upward—positioning LumiLedger for sustained national growth beyond Phase 3.</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
   <!-- Timeline -->
   <section id="timeline" class="wins">
-    <div class="container">
-      <h2>Timeline</h2>
-      <div class="wins-grid" style="grid-template-columns:repeat(3,1fr)">
-        <div class="win">
-          <h4>End of Q4 2025</h4>
-          <p>Legal and compliance foundation complete, NDAs active, and engineering hardening underway for a market-ready build.</p>
-        </div>
-        <div class="win">
-          <h4>End of Q1 2026</h4>
-          <p>Go-to-market activated: heavier marketing, grassroots networking, and live user demoing with subscriptions enabled and onboarding refined.</p>
-        </div>
-        <div class="win">
-          <h4>End of Q2 2026</h4>
-          <p>Official launch complete with subscription-required access, operations running at cadence, and growth markers in place for marketing and revenue.</p>
-        </div>
+    <h2>Timeline</h2>
+    <div class="wins-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="win">
+        <h4>End of Q4 2025</h4>
+        <p>Legal and compliance foundation complete, NDAs active, and engineering hardening underway for a market-ready build.</p>
+      </div>
+      <div class="win">
+        <h4>End of Q1 2026</h4>
+        <p>Go-to-market activated: heavier marketing, grassroots networking, and live user demoing with subscriptions enabled and onboarding refined.</p>
+      </div>
+      <div class="win">
+        <h4>End of Q2 2026</h4>
+        <p>Official launch complete with subscription-required access, operations running at cadence, and growth markers in place for marketing and revenue.</p>
       </div>
     </div>
   </section>
 
   <footer class="foot">
-    <div class="container foot-inner">
+    <div class="foot-inner">
       <a class="foot-site" href="https://LumiLedger.com" target="_blank" rel="noopener">LumiLedger.com</a>
       <div class="foot-mid">
         <div class="foot-brand">
