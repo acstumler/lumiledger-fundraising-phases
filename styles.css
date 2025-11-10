@@ -91,18 +91,18 @@ img,svg{max-width:100%;height:auto}
 }
 .card-accordion[open] .chev{ transform:rotate(45deg) }
 
-/* SPACING TWEAKS — more gap between title and bullets */
+/* SPACING — tighter gap between summary and bullets (all phases) */
 .card-accordion .card-body{
-  padding:12px 16px 16px 16px; /* increase top padding to add space below summary */
+  padding:6px 16px 16px 16px;   /* was 12px top */
 }
 .card-accordion .card-body > ul{
-  margin:8px 0;              /* consistent breathing room for each list */
+  margin:6px 0;                 /* was 8px */
 }
 .card-accordion .card-body > ul + ul{
-  margin-top:12px;           /* slightly larger gap between list groups */
+  margin-top:8px;               /* was 12px */
 }
 .card-accordion .card-body li{
-  margin:6px 0;              /* gentler rhythm inside lists */
+  margin:6px 0;
 }
 
 /* Timeline */
