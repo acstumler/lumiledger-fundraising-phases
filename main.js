@@ -1,34 +1,60 @@
 (function () {
-  var yr = document.getElementById('yr');
+  const yr = document.getElementById("yr");
   if (yr) yr.textContent = new Date().getFullYear();
 
-  var pills = document.querySelectorAll('.pill[data-phase]');
-  var accordions = document.querySelectorAll('.card-accordion');
-
-  function openPhase(n) {
-    accordions.forEach(function (d) {
-      d.open = d.getAttribute('data-phase') === String(n);
+  function openAndScrollTo(targetId) {
+    const detailsList = document.querySelectorAll(".card-accordion");
+    detailsList.forEach(d => {
+      if (d.id === targetId) d.open = true;
     });
-    var target = document.querySelector('.card-accordion[data-phase="' + n + '"]');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      el.focus({ preventScroll: true });
     }
   }
 
-  pills.forEach(function (p) {
-    p.addEventListener('click', function () { openPhase(p.dataset.phase); });
-    p.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPhase(p.dataset.phase); }
-    });
-  });
+  function onPillActivate(e) {
+    const pill = e.currentTarget;
+    const targetId = pill.getAttribute("aria-controls");
+    if (!targetId) return;
+    openAndScrollTo(targetId);
+  }
 
-  accordions.forEach(function (d) {
-    d.addEventListener('toggle', function () {
-      if (d.open) accordions.forEach(function (o) { if (o !== d) o.open = false; });
-    });
-  });
+  function onKey(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onPillActivate(e);
+    }
+  }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    accordions.forEach(function (d) { d.open = d.getAttribute('data-phase') === '1'; });
+  document.addEventListener("DOMContentLoaded", function () {
+    const pills = document.querySelectorAll(".pill[aria-controls]");
+    pills.forEach(p => {
+      p.addEventListener("click", onPillActivate);
+      p.addEventListener("keydown", onKey);
+    });
+
+    // Make timeline cards scroll to their phases if they contain matching text
+    const timelineMap = {
+      "End of Q4 2025": "phase-1",
+      "End of Q1 2026": "phase-2",
+      "End of Q2 2026": "phase-3"
+    };
+    document.querySelectorAll(".wins .win h4").forEach(h => {
+      const id = timelineMap[h.textContent.trim()];
+      if (!id) return;
+      const parent = h.closest(".win");
+      parent.style.cursor = "pointer";
+      parent.setAttribute("role", "button");
+      parent.setAttribute("tabindex", "0");
+      parent.addEventListener("click", () => openAndScrollTo(id));
+      parent.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openAndScrollTo(id);
+        }
+      });
+    });
   });
 })();
