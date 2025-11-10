@@ -90,7 +90,20 @@ img,svg{max-width:100%;height:auto}
   transform:rotate(-45deg); transition:transform .2s ease;
 }
 .card-accordion[open] .chev{ transform:rotate(45deg) }
-.card-accordion .card-body{ padding:0 16px 16px 16px }
+
+/* SPACING TWEAKS — more gap between title and bullets */
+.card-accordion .card-body{
+  padding:12px 16px 16px 16px; /* increase top padding to add space below summary */
+}
+.card-accordion .card-body > ul{
+  margin:8px 0;              /* consistent breathing room for each list */
+}
+.card-accordion .card-body > ul + ul{
+  margin-top:12px;           /* slightly larger gap between list groups */
+}
+.card-accordion .card-body li{
+  margin:6px 0;              /* gentler rhythm inside lists */
+}
 
 /* Timeline */
 .wins-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
